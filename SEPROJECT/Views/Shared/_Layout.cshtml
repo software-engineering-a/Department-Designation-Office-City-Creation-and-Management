@@ -1,0 +1,106 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WEB PROJECT</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/StyleSheet1.css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<style>
+    #h1id {
+        font-size: 60px;
+        color: silver;
+        font-family: "Courier New";
+    }
+
+    #jumbo {
+        text-align: center;
+        color: white;
+    }
+
+    #footer {
+        background-color: black;
+        text-align: center;
+    }
+
+    body {
+        background-color:grey;
+    }
+
+    #main {
+        background-image: url('../../Content/Images/pic1.jpg');
+     
+    }
+
+    #b1 {
+        text-align: center;
+        //word-spacing:30px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+<body>
+    <!--comment-->
+    <div id="main">
+        <div id="jumbo">
+            <h2 id="h1id"><strong>RESUME MANAGEMENT SYSTEM</strong></h2>
+        </div>
+        <div class="container-fluid">
+
+
+            <nav class="navbar navbar-default" style=background-color:white>
+
+                <div class="navbar-header">
+                    <a class="navbar-brand" style=color:black href="@Url.Action("Index", "Home")"><strong>RESUME MANAGEMENT</strong></a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("About", "Home")">About</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+                   
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><input type="text" name="search" placeholder="Search.."></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+
+                </ul>
+
+            </nav>
+            @RenderBody()
+            <hr />
+
+            <div id="footer">
+
+                <br>
+                <a href="@Url.Action("Index", "Home")"><button type="button" class="btn btn-link"><strong>HOME<strong></button></a>|
+                <a href="@Url.Action("About", "Home")"><button type="button" class="btn btn-link">About</button></a>|
+                <a href="@Url.Action("Contact", "Home")"><button type="button" class="btn btn-link">Contact</button></a>|
+                <button type="button" class="btn btn-link">Terms of use</button>|
+                <button type="button" class="btn btn-link">Privacy policy</button><br>
+                <p>© Copyright 2018 - 2025 resumemanagement.com</p>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

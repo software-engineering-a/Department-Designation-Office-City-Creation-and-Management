@@ -1,0 +1,41 @@
+﻿@model SEPROJECT.Models.department
+
+@{
+    ViewBag.Title = "Details";
+}
+<style>
+    #propertycreate {
+        border: 1px solid black;
+        padding: 25px 50px 75px;
+    }
+</style>
+<div id="propertycreate" style=background-color:silver>
+    <h2>Department Details</h2>
+
+    <div>
+       
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.dep_name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.dep_name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.dep_manager)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.dep_manager)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.dep_id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>

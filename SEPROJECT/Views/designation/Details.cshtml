@@ -1,0 +1,41 @@
+﻿@model SEPROJECT.Models.designation
+
+@{
+    ViewBag.Title = "Details";
+}
+<style>
+    #propertycreate {
+        border: 1px solid black;
+        padding: 25px 50px 75px;
+    }
+</style>
+<div id="propertycreate" style=background-color:silver>
+    <h2>Designation Details</h2>
+
+    <div>
+        <h4>designation</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.des_name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.des_name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.status)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.status)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.des_id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>

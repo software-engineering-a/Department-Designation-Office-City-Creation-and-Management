@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    #heading {
+        text-align: center;
+        
+    }
+ </style>
+
+<div class="well">
+
+    <div id=heading>
+    <h1><strong>Admin Portal</strong></h1>
+    </div>
+    <div id="check">
+
+    </div>
+    <p>
+    <p style=font-size:30px;>Choose Your Option!<p>
+        <br>
+        <br>
+        <div id=b1>
+            <a href="@Url.Action("Index", "office")">
+                <button style=font-size:30px type="button" class="btn btn-success btn-lg">Manage Offices</button>
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a href="@Url.Action("Index", "department")">
+                <button style=font-size:30px type="button" class="btn btn-success btn-lg">Manage Departments</button>
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a href="@Url.Action("Index", "designation")">
+                <button style=font-size:30px type="button" class="btn btn-success btn-lg">Manage Designations</button>
+            </a>
+            <br>
+        </div>
+    </p>
+</div>
